@@ -1,0 +1,249 @@
+[gd_scene load_steps=18 format=3 uid="uid://bxho7rd6t3rjy"]
+
+[ext_resource type="Script" uid="uid://eid7pqfkiihd" path="res://script/question.gd" id="1_2xyp1"]
+[ext_resource type="Texture2D" uid="uid://bain0nkn72coh" path="res://assets/task/0.png" id="2_ywo63"]
+[ext_resource type="FontFile" uid="uid://cm66ymf8xy1a3" path="res://assets/font/upheavtt.ttf" id="3_ywo63"]
+[ext_resource type="FontFile" uid="uid://bl2pof0bmxs8y" path="res://assets/font/RebellionSquad-ZpprZ.ttf" id="4_bfvgo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2gws"]
+texture = ExtResource("2_ywo63")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gti3"]
+bg_color = Color(0.607843, 0.466667, 0.298039, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_54i0q"]
+bg_color = Color(0.435294, 0.32549, 0.192157, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53udn"]
+bg_color = Color(0.529412, 0.4, 0.247059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drnw1"]
+bg_color = Color(0.607843, 0.466667, 0.298039, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2gws"]
+bg_color = Color(0.435294, 0.32549, 0.192157, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 5
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fb3nw"]
+bg_color = Color(0.529412, 0.4, 0.247059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elxs0"]
+bg_color = Color(0.607843, 0.466667, 0.298039, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuswb"]
+bg_color = Color(0.435294, 0.32549, 0.192157, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4bng"]
+bg_color = Color(0.529412, 0.4, 0.247059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c63oh"]
+bg_color = Color(0.607843, 0.466667, 0.298039, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vu7q"]
+bg_color = Color(0.435294, 0.32549, 0.192157, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbivq"]
+bg_color = Color(0.529412, 0.4, 0.247059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[node name="question_3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2xyp1")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.671855, 0.666818, 0.809325, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -908.0
+offset_top = -598.0
+offset_right = 908.0
+offset_bottom = 679.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_d2gws")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -426.0
+offset_top = -285.0
+offset_right = 529.0
+offset_bottom = -184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ywo63")
+theme_override_font_sizes/font_size = 30
+text = "A car with mass of 1,500 kg and exerts a force of 4,500 N.
+find the acceleration of the car."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -490.0
+offset_top = -158.0
+offset_right = 490.0
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_bfvgo")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_4gti3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_54i0q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_53udn")
+text = "A : 0.33  m / s^2"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_bfvgo")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_drnw1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d2gws")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fb3nw")
+text = "B : 3,000  m / s^2"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_bfvgo")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_elxs0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vuswb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e4bng")
+text = "C : 6,750,000  m / s^2"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_bfvgo")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_c63oh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0vu7q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qbivq")
+text = "D : 3  m / s^2"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]

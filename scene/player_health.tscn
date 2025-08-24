@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqxqc4yogvyf0"]
+
+[ext_resource type="Texture2D" uid="uid://dl56uidlma0hi" path="res://assets/heart/HealthUI.png" id="1_ogosg"]
+[ext_resource type="Script" uid="uid://drnucsflsqj8f" path="res://script/player_health.gd" id="1_xcwsa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcwsa"]
+atlas = ExtResource("1_ogosg")
+region = Rect2(0, 0, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yr6y"]
+atlas = ExtResource("1_ogosg")
+region = Rect2(22, 22, 11, 11)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ceqvt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcwsa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yr6y")
+}],
+"loop": true,
+"name": &"no_health",
+"speed": 5.0
+}]
+
+[node name="Player_health" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+script = ExtResource("1_xcwsa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 36.0
+offset_top = 33.0
+offset_right = 276.0
+offset_bottom = 33.0
+theme_override_constants/separation = 120
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer"]
+position = Vector2(57.25, 48.75)
+scale = Vector2(11.4091, 9.86364)
+sprite_frames = SubResource("SpriteFrames_ceqvt")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="HBoxContainer"]
+position = Vector2(177.25, 48.75)
+scale = Vector2(11.4091, 9.86364)
+sprite_frames = SubResource("SpriteFrames_ceqvt")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="HBoxContainer"]
+position = Vector2(297.25, 48.75)
+scale = Vector2(11.4091, 9.86364)
+sprite_frames = SubResource("SpriteFrames_ceqvt")

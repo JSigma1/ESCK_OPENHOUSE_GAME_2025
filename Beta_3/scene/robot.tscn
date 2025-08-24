@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://dc53cgo341fyy"]
+
+[ext_resource type="Script" uid="uid://c4bj7n8lml2gs" path="res://script/robot.gd" id="1_6lib3"]
+[ext_resource type="Texture2D" uid="uid://dmt7gwl1d4n4i" path="res://assets/robot/robot-spritesheet-removebg-preview.png" id="1_e0tv0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lib3"]
+atlas = ExtResource("1_e0tv0")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sm6e"]
+atlas = ExtResource("1_e0tv0")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvjgt"]
+atlas = ExtResource("1_e0tv0")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycupr"]
+atlas = ExtResource("1_e0tv0")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7aoh"]
+atlas = ExtResource("1_e0tv0")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_424po"]
+atlas = ExtResource("1_e0tv0")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fapv"]
+atlas = ExtResource("1_e0tv0")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ycsu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lib3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sm6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvjgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycupr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7aoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_424po")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fapv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gv75"]
+size = Vector2(6, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lib3"]
+size = Vector2(35, 7)
+
+[node name="robot" type="CharacterBody2D"]
+script = ExtResource("1_6lib3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_8ycsu")
+frame_progress = 0.761765
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 6.5)
+shape = SubResource("RectangleShape2D_4gv75")
+
+[node name="Area2D" type="Area2D" parent="." groups=["robot"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(9.5, 8)
+shape = SubResource("RectangleShape2D_6lib3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

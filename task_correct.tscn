@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbhb50qgjema1"]
+
+[ext_resource type="Script" uid="uid://bk2beek4rs8y6" path="res://task_correct.gd" id="1_nr3q5"]
+[ext_resource type="FontFile" uid="uid://dv8tnqa7ylju8" path="res://assets/font/04B_30__.TTF" id="1_t480m"]
+
+[node name="Task_correct" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_nr3q5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -444.0
+offset_top = 271.0
+offset_right = 446.0
+offset_bottom = 415.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.794402, 0.406072, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_t480m")
+theme_override_font_sizes/font_size = 80
+text = "Correct!"
+horizontal_alignment = 1
+vertical_alignment = 1

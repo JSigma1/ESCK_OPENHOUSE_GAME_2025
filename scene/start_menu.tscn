@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnqvrgreq180n"]
+
+[ext_resource type="Script" uid="uid://dg4swbw8a4104" path="res://script/start_menu.gd" id="1_p6ge0"]
+[ext_resource type="FontFile" uid="uid://dv8tnqa7ylju8" path="res://assets/font/04B_30__.TTF" id="1_x6qk2"]
+[ext_resource type="FontFile" uid="uid://cm66ymf8xy1a3" path="res://assets/font/upheavtt.ttf" id="2_e43t8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2t3q"]
+bg_color = Color(0, 0, 0, 0.462745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffvpn"]
+bg_color = Color(0.345946, 0.345946, 0.345946, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nld4k"]
+bg_color = Color(0.156675, 0.156675, 0.156675, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6ge0"]
+bg_color = Color(0.233925, 0.233925, 0.233925, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[node name="start_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p6ge0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i2t3q")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -742.0
+offset_top = -633.0
+offset_right = 743.0
+offset_bottom = -291.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_x6qk2")
+theme_override_font_sizes/font_size = 250
+text = "Open House"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -468.0
+offset_top = -297.0
+offset_right = 468.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_x6qk2")
+theme_override_font_sizes/font_size = 100
+text = "--------- Teasor ---------"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -263.0
+offset_top = 230.0
+offset_right = 264.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_e43t8")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/hover = SubResource("StyleBoxFlat_ffvpn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nld4k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_p6ge0")
+text = "Start"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

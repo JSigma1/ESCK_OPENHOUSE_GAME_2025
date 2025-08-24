@@ -1,0 +1,149 @@
+[gd_scene load_steps=7 format=3 uid="uid://ce0aeg2tistkq"]
+
+[ext_resource type="Script" uid="uid://eid7pqfkiihd" path="res://script/question.gd" id="1_8xytj"]
+[ext_resource type="Texture2D" uid="uid://bain0nkn72coh" path="res://assets/task/0.png" id="2_a1sfq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2gws"]
+texture = ExtResource("2_a1sfq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gti3"]
+bg_color = Color(0.609277, 0.465485, 0.29628, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_54i0q"]
+bg_color = Color(0.434773, 0.3245, 0.193736, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53udn"]
+bg_color = Color(0.53083, 0.399531, 0.248926, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[node name="question_2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8xytj")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.671855, 0.666818, 0.809325, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -908.0
+offset_top = -598.0
+offset_right = 908.0
+offset_bottom = 679.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_d2gws")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -620.0
+offset_top = -289.0
+offset_right = 764.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+text = "A light bulb has a resistance of 20 ohm when connected to a 120 V 
+power source, how many amperes will the current flow throught the bulb?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -490.0
+offset_top = -158.0
+offset_right = 490.0
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_4gti3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_54i0q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_53udn")
+text = "A: 100 ohm"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_4gti3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_54i0q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_53udn")
+text = "B: 0.167 ohm"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_4gti3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_54i0q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_53udn")
+text = "C: 6 ohm"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_4gti3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_54i0q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_53udn")
+text = "D: 2400 ohm"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]

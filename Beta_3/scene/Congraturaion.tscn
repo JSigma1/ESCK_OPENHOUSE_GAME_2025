@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://bksmlhr626v5v"]
+
+[ext_resource type="Script" uid="uid://d3t77342fk0jg" path="res://script/congraturaion.gd" id="1_wikpu"]
+[ext_resource type="Texture2D" uid="uid://bcq7rdffxu15u" path="res://assets/task/paper2.png" id="2_rxspf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_62e2m"]
+texture = ExtResource("2_rxspf")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
+bg_color = Color(0.612417, 0.467999, 0.238438, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee4bf"]
+bg_color = Color(0.397212, 0.296846, 0.135887, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbped"]
+bg_color = Color(0.478201, 0.361387, 0.170746, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wikpu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1164.5
+offset_top = -836.0
+offset_right = 1164.5
+offset_bottom = 836.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_62e2m")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -751.0
+offset_top = -415.0
+offset_right = 752.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.478431, 0.360784, 0.172549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 180
+text = "Congraturation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(70, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = 32.0
+offset_right = 340.0
+offset_bottom = 191.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 65
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtu10")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ee4bf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kbped")
+text = "Leaderboard"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

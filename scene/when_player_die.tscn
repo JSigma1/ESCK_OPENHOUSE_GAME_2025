@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://ra26iouum6fg"]
+
+[ext_resource type="Script" uid="uid://c8t45481mr44l" path="res://script/when_player_die.gd" id="1_57dsx"]
+[ext_resource type="FontFile" uid="uid://dv8tnqa7ylju8" path="res://assets/font/04B_30__.TTF" id="1_fg4l3"]
+[ext_resource type="FontFile" uid="uid://cm66ymf8xy1a3" path="res://assets/font/upheavtt.ttf" id="3_62psl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57dsx"]
+bg_color = Color(0.270588, 0.270588, 0.270588, 0.788235)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3l3p"]
+bg_color = Color(0.345946, 0.345946, 0.345946, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yxv6"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1jsi"]
+bg_color = Color(0.233925, 0.233925, 0.233925, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 5
+shadow_offset = Vector2(4, 4)
+
+[node name="When_player_die" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_57dsx")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_57dsx")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -444.0
+offset_top = 166.0
+offset_right = 446.0
+offset_bottom = 317.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_fg4l3")
+theme_override_font_sizes/font_size = 150
+text = "you die"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(70, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -385.0
+offset_top = 31.0
+offset_right = 386.0
+offset_bottom = 213.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_62psl")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/hover = SubResource("StyleBoxFlat_u3l3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7yxv6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l1jsi")
+text = "Restart"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
